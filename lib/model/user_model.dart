@@ -8,7 +8,7 @@ class UserModel {
     this.pic,
     this.userId,
 });
-  UserModel.fromJson(Map<dynamic,dynamic>map){
+  UserModel.fromJson( map){
     if (map==null){
       return;
     }

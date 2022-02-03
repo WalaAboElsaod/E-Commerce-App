@@ -1,18 +1,24 @@
 import 'package:ecommerce_app/helper/bindings.dart';
+import 'package:ecommerce_app/helper/cash_helper.dart';
 import 'package:ecommerce_app/view/auth/login/login_screen.dart';
 import 'package:ecommerce_app/view/home_screen/home_screen.dart';
 import 'package:ecommerce_app/view/view_controller_bottom_nav.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp();
+  // await CashHelper.init();
+
 
   runApp(MyApp());
+
 }
 
 class MyApp extends StatelessWidget {

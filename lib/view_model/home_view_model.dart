@@ -13,11 +13,13 @@ class HomeViewMdel extends GetxController {
 
  List < CategoryModel> categoryModel=[];
  List < ProductModel> productModel=[];
+ List < DataModel> categoryProductModel=[];
 
 
 
   HomeViewMdel() {
     getCategory();
+    // getCategoryProduct();
     getBestSellingPrudcts();
   }
 
@@ -34,9 +36,27 @@ class HomeViewMdel extends GetxController {
 
       update();
 
-    });
-  }
-
+    }
+  );
+}
+//   getCategoryProduct() async {
+//     _loading.value=true;
+//    // await HomeService().getCategoryProduct().
+//
+//     then((value) {
+//       for(int i=0;i<value.length;i++){
+//         categoryProductModel.add(DataModel.fromjson(value[i].data()));
+//         _loading.value=false;
+//         print('cccccccccccccccc ${categoryProductModel}');
+//
+//
+//       }
+//
+//       update();
+//
+//     }
+//   );
+// }
   getBestSellingPrudcts ()async{
     _loading.value=true;
     await HomeService().getBestSelling().then((value) {

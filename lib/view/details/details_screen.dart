@@ -20,29 +20,29 @@ class DetailsScreen extends StatelessWidget {
       body: SafeArea(
         child: Container(
           child: Column(children: [
-            // CarouselSlider(
-            //   items: [
+             CarouselSlider(
+               items: [
                 Image(
                   image: NetworkImage(
                     model!.image!,
                   ),
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                  // width: double.infinity,
+                  fit: BoxFit.contain,
                 ),
-            //  ],
-              // options: CarouselOptions(
-              //   height: 250,
-              //   viewportFraction: 1.0,
-              //   initialPage: 0,
-              //   enableInfiniteScroll: true,
-              //   reverse: false,
-              //   autoPlay: true,
-              //   autoPlayInterval: Duration(seconds: 3),
-              //   autoPlayAnimationDuration: Duration(seconds: 1),
-              //   autoPlayCurve: Curves.fastOutSlowIn,
-              //   scrollDirection: Axis.horizontal,
-            //   ),
-           // ),
+              ],
+              options: CarouselOptions(
+                height: 250,
+                viewportFraction: 1.0,
+                initialPage: 0,
+                enableInfiniteScroll: true,
+                reverse: false,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 3),
+                autoPlayAnimationDuration: Duration(seconds: 1),
+                autoPlayCurve: Curves.fastOutSlowIn,
+                scrollDirection: Axis.horizontal,
+              ),
+           ),
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
@@ -158,18 +158,20 @@ class DetailsScreen extends StatelessWidget {
                   builder: (controller)=> Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: CustomButton(
+                      textColor: Colors.white,
                       isUpperCase: true,
                       width: Get.width * .4,
                       text: 'Add',
                       background: Colors.orangeAccent,
                       radius: 10,
-                      function: () =>
+                      function:()=>
                         controller.addProduct(CartModel(
                             name:model!.name,
                             image:model!.image,
                             price:model!.price,
                           productId:model!.productId,
-                        quantity:1,
+
+                              quantity:1,
                         ))
 
                       ,

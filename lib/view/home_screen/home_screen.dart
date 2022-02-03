@@ -196,7 +196,7 @@ class Home extends StatelessWidget {
           image: NetworkImage(
             cont.productModel[index].image!
           ),
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
           width: double.infinity,
           height: Get.height * .35,
         ),

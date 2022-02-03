@@ -135,6 +135,7 @@ class LoginBody extends GetWidget<AuthViewModel> {
                 ),
               ]),
              CustomButton(background: Colors.orangeAccent,
+               textColor: Colors.white,
 
                function: ()async {
                  formKey.currentState!.save();

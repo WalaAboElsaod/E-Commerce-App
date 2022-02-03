@@ -1,7 +1,4 @@
 import 'package:ecommerce_app/view/auth/login/login_screen.dart';
-import 'package:ecommerce_app/view/cart/cart_screen.dart';
-import 'package:ecommerce_app/view/home_screen/home_screen.dart';
-import 'package:ecommerce_app/view/profile/profile_screen.dart';
 import 'package:ecommerce_app/view_model/auth_view_model.dart';
 import 'package:ecommerce_app/view_model/control_home_view_model.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +29,7 @@ class ControlView extends GetWidget<AuthViewModel> {
 
   Widget bottomNavigation() =>
       GetBuilder<ControlHomeViewModel>(
-        init: ControlHomeViewModel(),
+        init:ControlHomeViewModel(),
         builder: (controller) =>
 
             BottomNavigationBar(

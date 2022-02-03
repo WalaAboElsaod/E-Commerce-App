@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   double width=double.infinity;
-      Color background = Colors.orangeAccent;
+      Color background ;
+    final  Color textColor ;
   late double radius;
    Function? function;
   bool isUpperCase = true;
@@ -10,6 +11,7 @@ class CustomButton extends StatelessWidget {
           CustomButton({
     required this.background,
             this.function,
+             this.textColor=Colors.white,
             required this.isUpperCase,
             required this.radius,
             required this.text,
@@ -31,7 +33,7 @@ class CustomButton extends StatelessWidget {
         },
         child: Text(
           isUpperCase ? text.toUpperCase() : text,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: textColor),
         ),
       ),
       decoration: BoxDecoration(

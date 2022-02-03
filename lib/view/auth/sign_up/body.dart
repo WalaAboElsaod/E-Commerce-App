@@ -180,6 +180,7 @@ class Body extends GetWidget<AuthViewModel> {
               height: 20,
             ),
             CustomButton(background: Colors.orangeAccent,
+              textColor: Colors.white,
 
               function: ()async {
            formKey.currentState!.save();

@@ -1,8 +1,8 @@
 class CartModel{
   String?name,image,price,productId;
-  int? quantity;
-  CartModel({this.name,this.image,this.quantity,this.price,this.productId});
-  CartModel.fromJson(map)
+  late int quantity;
+  CartModel({this.name,this.image, required this.quantity,this.price,this.productId});
+  CartModel.fromJson(Map <dynamic,dynamic> map)
   {
     if (map == null){
       return;
@@ -19,7 +19,9 @@ class CartModel{
       'image':image,
       'price':price,
       'productId':productId,
-    };
+    'quantity':quantity,
+
+  };
   }
 
 
